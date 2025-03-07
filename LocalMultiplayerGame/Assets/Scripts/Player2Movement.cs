@@ -11,7 +11,7 @@ public class Player2Movement : MonoBehaviour
 
     private void Start()
     {
-        if (gameObject.name == "PlayerTwo")
+        if (gameObject.name == "Player2")
         {
             GetComponent<PlayerInput>().SwitchCurrentControlScheme("Keyboard02", Keyboard.current);
         }

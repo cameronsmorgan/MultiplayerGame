@@ -68,21 +68,21 @@ LightmapSettings:
     m_TextureCompression: 1
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
-    m_BakeBackend: 1
+    m_BakeBackend: 0
     m_PVRSampling: 1
     m_PVRDirectSampleCount: 32
-    m_PVRSampleCount: 512
+    m_PVRSampleCount: 500
     m_PVRBounces: 2
-    m_PVREnvironmentSampleCount: 256
+    m_PVREnvironmentSampleCount: 500
     m_PVREnvironmentReferencePointCount: 2048
-    m_PVRFilteringMode: 1
-    m_PVRDenoiserTypeDirect: 1
-    m_PVRDenoiserTypeIndirect: 1
-    m_PVRDenoiserTypeAO: 1
+    m_PVRFilteringMode: 2
+    m_PVRDenoiserTypeDirect: 0
+    m_PVRDenoiserTypeIndirect: 0
+    m_PVRDenoiserTypeAO: 0
     m_PVRFilterTypeDirect: 0
     m_PVRFilterTypeIndirect: 0
     m_PVRFilterTypeAO: 0
-    m_PVREnvironmentMIS: 1
+    m_PVREnvironmentMIS: 0
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
@@ -340,7 +340,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &5556887264258557343
+--- !u!1001 &1457127945
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -354,11 +354,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8079426791421655741, guid: dcd705d3e0a8966408c8e3b72f28c843, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.99780023
+      value: -1.5528096
       objectReference: {fileID: 0}
     - target: {fileID: 8079426791421655741, guid: dcd705d3e0a8966408c8e3b72f28c843, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.96039027
+      value: 0.3160984
       objectReference: {fileID: 0}
     - target: {fileID: 8079426791421655741, guid: dcd705d3e0a8966408c8e3b72f28c843, type: 3}
       propertyPath: m_LocalPosition.z
@@ -397,7 +397,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dcd705d3e0a8966408c8e3b72f28c843, type: 3}
---- !u!1001 &9012581381557172805
+--- !u!1001 &1917266131
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -407,11 +407,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 758513290308982102, guid: 39bf4375a3a969848af3f4cb2ee40466, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.38
+      value: -5.7208557
       objectReference: {fileID: 0}
     - target: {fileID: 758513290308982102, guid: 39bf4375a3a969848af3f4cb2ee40466, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.96039027
+      value: -3.1003337
       objectReference: {fileID: 0}
     - target: {fileID: 758513290308982102, guid: 39bf4375a3a969848af3f4cb2ee40466, type: 3}
       propertyPath: m_LocalPosition.z
@@ -460,5 +460,5 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 619394802}
-  - {fileID: 9012581381557172805}
-  - {fileID: 5556887264258557343}
+  - {fileID: 1917266131}
+  - {fileID: 1457127945}
