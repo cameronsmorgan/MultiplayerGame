@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-public class PlayerMovement : MonoBehaviour
+
+public class Player2Movement : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 5f;
 
@@ -8,19 +9,21 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
 
 
-
     private void Start()
     {
-        if (gameObject.name == "Player1")
+        if (gameObject.name == "PlayerTwo")
         {
-            GetComponent<PlayerInput>().SwitchCurrentControlScheme("Keyboard", Keyboard.current);
+            GetComponent<PlayerInput>().SwitchCurrentControlScheme("Keyboard02", Keyboard.current);
         }
     }
+
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }
+
+    
 
     public void OnMove(InputAction.CallbackContext context)
     {
