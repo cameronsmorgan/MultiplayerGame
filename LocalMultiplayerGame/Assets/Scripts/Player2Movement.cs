@@ -13,6 +13,8 @@ public class Player2Movement : MonoBehaviour
     private Vector2 movementInput;
     private Rigidbody2D rb;
 
+    private TileMapManager tilemapManager;
+
     private void Start()
     {
         if (gameObject.name == "Player1")
@@ -25,6 +27,9 @@ public class Player2Movement : MonoBehaviour
             GetComponent<PlayerInput>().SwitchCurrentControlScheme("Keyboard02", Keyboard.current);
             playerID = "Player2";  // Set Player 2's ID
         }
+
+        tilemapManager = FindFirstObjectByType<TileMapManager>();
+
     }
 
     private void Awake()
@@ -52,20 +57,16 @@ public class Player2Movement : MonoBehaviour
 
     private void PaintOnTilemap(Vector2 position)
     {
-        // Convert world position to tile position
         Vector3Int tilePosition = tilemap.WorldToCell(position);
-
-        // Check if the current position has a tile
         Tile currentTile = tilemap.GetTile<Tile>(tilePosition);
 
-        // If there is no tile or it's the other player's tile, paint the current player's tile
         if (currentTile == null || (playerID == "Player1" && currentTile != player1Tile) || (playerID == "Player2" && currentTile != player2Tile))
         {
-            // Choose the tile based on the player
             Tile tileToPaint = playerID == "Player1" ? player1Tile : player2Tile;
-
-            // Paint the tile at the calculated position
             tilemap.SetTile(tilePosition, tileToPaint);
+
+            // Update the tile coverage when a tile is painted
+            tilemapManager.UpdateTileCoverage();
         }
     }
 }
