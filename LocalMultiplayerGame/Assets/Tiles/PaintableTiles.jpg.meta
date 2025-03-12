@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5b6508cef94402d4284397659dbe9d59
+guid: 1ed70df85eab11845b3df65ea30b7a60
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4166686281771431950
-    second: bluetile_0
+      213: -2234773729263546745
+    second: PaintableTiles_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 400
+  spritePixelsToUnits: 700
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bluetile_0
+      name: PaintableTiles_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 220
-        height: 217
+        width: 320
+        height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2f7458c17e4fc26c0800000000000000
-      internalID: -4166686281771431950
+      spriteID: 78e0fd1322d7cf0e0800000000000000
+      internalID: -2234773729263546745
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      bluetile_0: -4166686281771431950
+      PaintableTiles_0: -2234773729263546745
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
