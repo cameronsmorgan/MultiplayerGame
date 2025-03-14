@@ -11,14 +11,21 @@ public class ColourBomb : MonoBehaviour
 
     private CameraShake cameraShake;
 
-    private void Start()
+    private void Awake()
     {
-        tilemap = FindFirstObjectByType<Tilemap>();
+       // tilemap = FindFirstObjectByType<Tilemap>();
         cameraShake = Camera.main.GetComponent<CameraShake>();
 
         if (cameraShake == null)
         {
             Debug.LogError("CameraShake component not found on the main camera!");
+        if (tilemap == null)
+        {
+            GameObject tilemapObject = GameObject.Find("PaintableTiles");
+            if (tilemapObject != null)
+            {
+                tilemap = tilemapObject.GetComponent<Tilemap>();
+            }
         }
     }
 

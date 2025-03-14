@@ -7,6 +7,17 @@ public class EraseBomb : MonoBehaviour
     public Tile player1Tile;
     public Tile player2Tile;
 
+    private void Awake()
+    {
+        if (tilemap == null)
+        {
+            GameObject tilemapObject = GameObject.Find("PlayerPaintTileMap");
+            if(tilemapObject !=null )
+            {
+                tilemap= tilemapObject.GetComponent<Tilemap>();
+            }
+        }
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player1") || collision.CompareTag("Player2"))
