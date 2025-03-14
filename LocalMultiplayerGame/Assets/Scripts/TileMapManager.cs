@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
+
 public class TileMapManager : MonoBehaviour
 {
     [SerializeField] private Tilemap tilemap;
@@ -10,6 +11,9 @@ public class TileMapManager : MonoBehaviour
 
     [SerializeField] private Text player1PercentageText;
     [SerializeField] private Text player2PercentageText;
+
+    [SerializeField] private Slider player1ProgressBar; // Progress bar for Player 1
+    [SerializeField] private Slider player2ProgressBar; // Progress bar for Player 2
 
     [SerializeField] private BoxCollider2D playAreaCollider;
 
@@ -28,6 +32,10 @@ public class TileMapManager : MonoBehaviour
         }
 
         CountTotalTiles();
+
+        // Initialize progress bars
+        if (player1ProgressBar != null) player1ProgressBar.value = 0;
+        if (player2ProgressBar != null) player2ProgressBar.value = 0;
 
         InvokeRepeating(nameof(UpdateTileCoverage), 1f, 0.5f);
     }
@@ -59,15 +67,12 @@ public class TileMapManager : MonoBehaviour
         player1Tiles = 0;
         player2Tiles = 0;
 
-        // Get the bounds of the BoxCollider2D (world space)
         Vector2 min = playAreaCollider.bounds.min;
         Vector2 max = playAreaCollider.bounds.max;
 
-        // Convert to Tilemap cell positions
         Vector3Int minBounds = tilemap.WorldToCell(min);
         Vector3Int maxBounds = tilemap.WorldToCell(max);
 
-        // Iterate over the tiles within the BoxCollider2D's bounds
         for (int x = minBounds.x; x <= maxBounds.x; x++)
         {
             for (int y = minBounds.y; y <= maxBounds.y; y++)
@@ -75,7 +80,6 @@ public class TileMapManager : MonoBehaviour
                 Vector3Int tilePosition = new Vector3Int(x, y, 0);
                 Tile tile = tilemap.GetTile<Tile>(tilePosition);
 
-                // Only count tiles that exist on the tilemap within the collider area
                 if (tile != null)
                 {
                     if (tile == player1Tile) player1Tiles++;
@@ -84,25 +88,24 @@ public class TileMapManager : MonoBehaviour
             }
         }
 
-        // Ensure totalTiles is correctly set (total tiles in the collider area)
         totalTiles = (maxBounds.x - minBounds.x + 1) * (maxBounds.y - minBounds.y + 1);
 
-        // Convert to float for accurate percentage calculation
         float player1Percentage = ((float)player1Tiles / totalTiles) * 100f;
         float player2Percentage = ((float)player2Tiles / totalTiles) * 100f;
 
-        // Cap percentages to 100% max
         float totalCovered = player1Percentage + player2Percentage;
         if (totalCovered > 100f)
         {
-            // If both players exceed 100%, adjust the percentages proportionally
             player1Percentage = Mathf.Clamp(player1Percentage - (totalCovered - 100f) * (player1Percentage / totalCovered), 0, 100);
             player2Percentage = Mathf.Clamp(player2Percentage - (totalCovered - 100f) * (player2Percentage / totalCovered), 0, 100);
         }
 
-        // Update UI
         player1PercentageText.text = "Player 1: " + player1Percentage.ToString("F1") + "%";
         player2PercentageText.text = "Player 2: " + player2Percentage.ToString("F1") + "%";
+
+        // Update Progress Bars
+        if (player1ProgressBar != null) player1ProgressBar.value = player1Percentage;
+        if (player2ProgressBar != null) player2ProgressBar.value = player2Percentage;
     }
 
     public bool IsPlayableTile(Vector3Int tilePosition)
@@ -110,3 +113,4 @@ public class TileMapManager : MonoBehaviour
         return playableTiles.Contains(tilePosition);
     }
 }
+
