@@ -100,8 +100,8 @@ public class TileMapManager : MonoBehaviour
             player2Percentage = Mathf.Clamp(player2Percentage - (totalCovered - 100f) * (player2Percentage / totalCovered), 0, 100);
         }
 
-        player1PercentageText.text = "Player 1: " + player1Percentage.ToString("F1") + "%";
-        player2PercentageText.text = "Player 2: " + player2Percentage.ToString("F1") + "%";
+        player1PercentageText.text = "PLAYER 1 \n" + player1Percentage.ToString("F1") + "%";
+        player2PercentageText.text = "PLAYER 2 \n" + player2Percentage.ToString("F1") + "%";
 
         // Update Progress Bars
         if (player1ProgressBar != null) player1ProgressBar.value = player1Percentage;
