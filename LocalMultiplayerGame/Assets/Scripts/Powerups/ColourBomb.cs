@@ -3,7 +3,7 @@ using UnityEngine.Tilemaps;
 
 public class ColourBomb : MonoBehaviour
 {
-    public Tilemap tilemap;
+    public Tilemap tilemap; // Player's paint tilemap (not the base tilemap)
     public Tile player1Tile;
     public Tile player2Tile;
     public float shakeDuration = 0.5f; // Duration of the camera shake
@@ -13,19 +13,26 @@ public class ColourBomb : MonoBehaviour
 
     private void Awake()
     {
-       // tilemap = FindFirstObjectByType<Tilemap>();
-        cameraShake = Camera.main.GetComponent<CameraShake>();
-
-        if (cameraShake == null)
-        {
-            Debug.LogError("CameraShake component not found on the main camera!");
+        // Auto-assign tilemap if not set in Inspector
         if (tilemap == null)
         {
-            GameObject tilemapObject = GameObject.Find("PaintableTiles");
+            GameObject tilemapObject = GameObject.Find("PaintableTiles"); // Ensure this is the correct name
             if (tilemapObject != null)
             {
                 tilemap = tilemapObject.GetComponent<Tilemap>();
             }
+            else
+            {
+                Debug.LogError("PlayerPaintTilemap not found! Ensure it's named correctly in Unity.");
+            }
+        }
+
+        // Get camera shake component
+        cameraShake = Camera.main?.GetComponent<CameraShake>();
+
+        if (cameraShake == null)
+        {
+            Debug.LogWarning("CameraShake component not found on the main camera.");
         }
     }
 
@@ -41,11 +48,9 @@ public class ColourBomb : MonoBehaviour
             ApplyPaintSplash(gridPosition, paintTile);
 
             // Trigger camera shake
-            if (cameraShake != null)
-            {
-                cameraShake.TriggerShake(shakeDuration, shakeMagnitude);
-            }
+            cameraShake?.TriggerShake(shakeDuration, shakeMagnitude);
 
+            // Destroy bomb object after explosion
             Destroy(gameObject);
         }
     }
@@ -58,17 +63,17 @@ public class ColourBomb : MonoBehaviour
             return;
         }
 
-        // Loop through a 6x6 area around the bomb (7x7 total including center)
+        // Loop through a 6x6 area around the bomb (total 7x7 including center)
         for (int x = -3; x <= 3; x++)
         {
             for (int y = -3; y <= 3; y++)
             {
                 Vector3Int tilePosition = new Vector3Int(center.x + x, center.y + y, center.z);
 
-                // Only paint if there's already a tile there
+                // Paint only on the playerPaintTilemap
                 if (tilemap.HasTile(tilePosition))
                 {
-                    tilemap.SetTile(tilePosition, tile); // Apply paint
+                    tilemap.SetTile(tilePosition, tile);
                 }
             }
         }
