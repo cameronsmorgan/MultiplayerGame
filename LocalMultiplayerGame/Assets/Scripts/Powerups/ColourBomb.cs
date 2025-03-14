@@ -3,14 +3,20 @@ using UnityEngine.Tilemaps;
 
 public class ColourBomb : MonoBehaviour
 {
-    public Tilemap tilemap;
+    [SerializeField ]private Tilemap tilemap;
     public Tile player1Tile;
     public Tile player2Tile;
 
-    private void Start()
+    private void Awake()
     {
-        tilemap = FindFirstObjectByType<Tilemap>();
-
+        if (tilemap == null) // Assign only if not set in Inspector
+        {
+            GameObject tilemapObject = GameObject.Find("PaintableTiles"); 
+            if (tilemapObject != null)
+            {
+                tilemap = tilemapObject.GetComponent<Tilemap>();
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
