@@ -112,5 +112,15 @@ public class TileMapManager : MonoBehaviour
     {
         return playableTiles.Contains(tilePosition);
     }
+
+    public float GetPlayer1Percentage()
+    {
+        return ((float)player1Tiles / totalTiles) * 100f;
+    }
+
+    public float GetPlayer2Percentage()
+    {
+        return ((float)player2Tiles / totalTiles) * 100f;
+    }
 }
 
