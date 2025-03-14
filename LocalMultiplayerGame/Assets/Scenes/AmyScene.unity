@@ -1178,6 +1178,54 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!1 &1363743664
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1363743666}
+  - component: {fileID: 1363743665}
+  m_Layer: 0
+  m_Name: PaintArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1363743665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363743664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 433843ba61562cc459b0ed8f299b7d64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paintableTilemap: {fileID: 1012925033}
+  playerPaintTilemap: {fileID: 0}
+  player1Tile: {fileID: 11400000, guid: e8d3c344c7db0ef4aaf6de9388968364, type: 2}
+  player2Tile: {fileID: 11400000, guid: 24ba8eb4d082d744389c3020c505b6d4, type: 2}
+--- !u!4 &1363743666
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363743664}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.4768635, y: 1.3398504, z: -0.088180766}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1457127945
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1373,6 +1421,10 @@ PrefabInstance:
       propertyPath: playerColor.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2805535488467593731, guid: 39bf4375a3a969848af3f4cb2ee40466, type: 3}
+      propertyPath: boundsCollider
+      value: 
+      objectReference: {fileID: 409169529}
     - target: {fileID: 3873793010874827357, guid: 39bf4375a3a969848af3f4cb2ee40466, type: 3}
       propertyPath: m_Color.b
       value: 0.0877552
@@ -1427,3 +1479,4 @@ SceneRoots:
   - {fileID: 409169530}
   - {fileID: 385152199}
   - {fileID: 495256587}
+  - {fileID: 1363743666}
