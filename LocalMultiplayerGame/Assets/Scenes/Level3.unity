@@ -605,11 +605,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aef863e7f9709734988047af6359de4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tilemap: {fileID: 1414243220}
+  tilemap: {fileID: 1012925033}
   player1Tile: {fileID: 11400000, guid: e8d3c344c7db0ef4aaf6de9388968364, type: 2}
   player2Tile: {fileID: 11400000, guid: 24ba8eb4d082d744389c3020c505b6d4, type: 2}
   player1PercentageText: {fileID: 1196310067}
   player2PercentageText: {fileID: 349212326}
+  player1ProgressBar: {fileID: 0}
+  player2ProgressBar: {fileID: 0}
   playAreaCollider: {fileID: 409169529}
 --- !u!1 &619394800
 GameObject:
@@ -4016,7 +4018,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paintableTilemap: {fileID: 1414243220}
-  playerPaintTilemap: {fileID: 1414243220}
+  playerPaintTilemap: {fileID: 1012925033}
   player1Tile: {fileID: 11400000, guid: e8d3c344c7db0ef4aaf6de9388968364, type: 2}
   player2Tile: {fileID: 11400000, guid: 24ba8eb4d082d744389c3020c505b6d4, type: 2}
 --- !u!4 &998474404
@@ -4046,7 +4048,7 @@ GameObject:
   - component: {fileID: 1012925033}
   - component: {fileID: 1012925032}
   m_Layer: 0
-  m_Name: Tilemap
+  m_Name: PlayerPaintTileMap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4110,7 +4112,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -10066,7 +10068,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3954613181658526906, guid: dcd705d3e0a8966408c8e3b72f28c843, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5475355782660461170, guid: dcd705d3e0a8966408c8e3b72f28c843, type: 3}
       propertyPath: m_BodyType
@@ -10258,7 +10260,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3873793010874827357, guid: 39bf4375a3a969848af3f4cb2ee40466, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4455858245869409687, guid: 39bf4375a3a969848af3f4cb2ee40466, type: 3}
       propertyPath: m_BodyType
@@ -10284,12 +10286,12 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 1917266131}
   - {fileID: 1457127945}
+  - {fileID: 1375068865}
   - {fileID: 504937732}
   - {fileID: 557783968}
   - {fileID: 220323534}
   - {fileID: 1086642815}
   - {fileID: 409169530}
-  - {fileID: 1375068865}
   - {fileID: 705305547}
   - {fileID: 998474404}
   - {fileID: 731271434}

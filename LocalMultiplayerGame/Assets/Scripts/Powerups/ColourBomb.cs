@@ -7,10 +7,16 @@ public class ColourBomb : MonoBehaviour
     public Tile player1Tile;
     public Tile player2Tile;
 
-    private void Start()
+    private void Awake()
     {
-        tilemap = FindFirstObjectByType<Tilemap>();
-
+        if (tilemap == null)
+        {
+            GameObject tilemapObject = GameObject.Find("PaintableTiles");
+            if (tilemapObject != null)
+            {
+                tilemap = tilemapObject.GetComponent<Tilemap>();
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
