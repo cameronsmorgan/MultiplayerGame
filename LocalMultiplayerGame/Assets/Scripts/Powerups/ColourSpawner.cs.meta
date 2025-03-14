@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f8ce8a608c0396f4db2b304b3c3f45ca
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - colorBombPrefab: {fileID: 8236732027088745697, guid: 6269a7a68e1277d45a9ef7cf298c6f0e, type: 3}
+  - tilemap: {instanceID: 0}
+  - playAreaCollider: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
