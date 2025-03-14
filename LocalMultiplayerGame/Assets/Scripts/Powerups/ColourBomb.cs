@@ -6,11 +6,20 @@ public class ColourBomb : MonoBehaviour
     public Tilemap tilemap;
     public Tile player1Tile;
     public Tile player2Tile;
+    public float shakeDuration = 0.5f; // Duration of the camera shake
+    public float shakeMagnitude = 0.1f; // Magnitude of the camera shake
+
+    private CameraShake cameraShake;
 
     private void Start()
     {
         tilemap = FindFirstObjectByType<Tilemap>();
+        cameraShake = Camera.main.GetComponent<CameraShake>();
 
+        if (cameraShake == null)
+        {
+            Debug.LogError("CameraShake component not found on the main camera!");
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -23,6 +32,12 @@ public class ColourBomb : MonoBehaviour
             Tile paintTile = collision.CompareTag("Player1") ? player1Tile : player2Tile;
 
             ApplyPaintSplash(gridPosition, paintTile);
+
+            // Trigger camera shake
+            if (cameraShake != null)
+            {
+                cameraShake.TriggerShake(shakeDuration, shakeMagnitude);
+            }
 
             Destroy(gameObject);
         }

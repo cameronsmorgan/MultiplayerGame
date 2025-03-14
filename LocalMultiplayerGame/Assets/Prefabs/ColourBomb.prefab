@@ -168,3 +168,5 @@ MonoBehaviour:
   tilemap: {fileID: 0}
   player1Tile: {fileID: 11400000, guid: e8d3c344c7db0ef4aaf6de9388968364, type: 2}
   player2Tile: {fileID: 11400000, guid: 24ba8eb4d082d744389c3020c505b6d4, type: 2}
+  shakeDuration: 0.3
+  shakeMagnitude: 0.1
