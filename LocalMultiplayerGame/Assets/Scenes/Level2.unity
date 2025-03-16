@@ -605,7 +605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aef863e7f9709734988047af6359de4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tilemap: {fileID: 1012925033}
+  tilemap: {fileID: 1414243220}
   player1Tile: {fileID: 11400000, guid: e8d3c344c7db0ef4aaf6de9388968364, type: 2}
   player2Tile: {fileID: 11400000, guid: 24ba8eb4d082d744389c3020c505b6d4, type: 2}
   player1PercentageText: {fileID: 1196310067}
@@ -3432,7 +3432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paintableTilemap: {fileID: 1414243220}
-  playerPaintTilemap: {fileID: 1012925033}
+  outlineTilemap: {fileID: 0}
   player1Tile: {fileID: 11400000, guid: e8d3c344c7db0ef4aaf6de9388968364, type: 2}
   player2Tile: {fileID: 11400000, guid: 24ba8eb4d082d744389c3020c505b6d4, type: 2}
 --- !u!4 &998474404
