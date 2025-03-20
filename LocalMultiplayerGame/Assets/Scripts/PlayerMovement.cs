@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] private float bounceForce = 5f; // Added bounce force
+    [SerializeField] private float bounceForce = 8f; // Stronger bounce effect
     [SerializeField] private string playerID;
     [SerializeField] private BoxCollider2D boundsCollider; // Restricts movement
     public Animator Snail1Cont; 
