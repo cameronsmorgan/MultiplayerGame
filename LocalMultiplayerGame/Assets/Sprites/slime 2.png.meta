@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: a8d0b32ecb928db4daa751b62f2ce230
+guid: 4b25102cb54df6a47b7bb41d206d5a41
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8821028690484728210
-    second: snail 1_0
+      213: -3618851452078965172
+    second: slime 2_0
   - first:
-      213: 7414051392776917870
-    second: snail 1_1
+      213: 2244397711267812242
+    second: slime 2_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -54,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 144
+  spritePixelsToUnits: 400
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,12 +103,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: snail 1_0
+      name: slime 2_0
       rect:
         serializedVersion: 2
-        x: 79
+        x: 0
         y: 0
-        width: 162
+        width: 320
         height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -116,32 +116,76 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2911fd1bbd69a6a70800000000000000
-      internalID: 8821028690484728210
+      spriteID: 58644568433e9c145a763c881aa1fb6b
+      internalID: -1430711963
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: snail 1_1
+      name: slime 2_1
       rect:
         serializedVersion: 2
-        x: 399
+        x: 320
         y: 0
-        width: 162
-        height: 301
+        width: 320
+        height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e6355fcd57004e660800000000000000
-      internalID: 7414051392776917870
+      spriteID: 5c9bd05493360a74bb94b5941e7ab2ea
+      internalID: -579969818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime 2_2
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9320147e0845314bb680963774fb3c9
+      internalID: -882160487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime 2_3
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d13c267935dd9d42b8a6f68e32c423c
+      internalID: -846364475
       vertices: []
       indices: 
       edges: []
@@ -150,7 +194,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d820d1ebdba164a4889c557f8aef0161
     internalID: 0
     vertices: []
     indices: 
@@ -160,8 +204,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      snail 1_0: 8821028690484728210
-      snail 1_1: 7414051392776917870
+      slime 2_0: -1430711963
+      slime 2_1: -579969818
+      slime 2_2: -882160487
+      slime 2_3: -846364475
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
