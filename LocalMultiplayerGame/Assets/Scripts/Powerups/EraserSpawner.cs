@@ -12,7 +12,7 @@ public class EraserSpawner : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating(nameof(SpawnEraserBomb), SpawnInterval, SpawnInterval);
+        InvokeRepeating(nameof(SpawnEraserBomb), SpawnInterval, SpawnInterval);  //SpawnEraseBomb Method, SpawnInterval = how long to wait before spawning the first bomb, Spawn Interval = how often to spawn
     }
 
     private void SpawnEraserBomb()
@@ -21,11 +21,11 @@ public class EraserSpawner : MonoBehaviour
         GameObject newBomb = Instantiate(EraserBombPrefab, randomPosition, Quaternion.identity);
 
         // Pass the Tilemap reference to the spawned object
-        EraseBomb eraseBombScript = newBomb.GetComponent<EraseBomb>();
-        if (eraseBombScript != null)
-        {
-            eraseBombScript.tilemap = tilemaps;
-        }
+        //EraseBomb eraseBombScript = newBomb.GetComponent<EraseBomb>();
+        //if (eraseBombScript != null)
+        //{
+        //    eraseBombScript.tilemap = tilemaps;
+        //}
     }
 
 
