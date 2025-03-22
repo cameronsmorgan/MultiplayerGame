@@ -3,9 +3,10 @@ using UnityEngine.InputSystem;
 
 public class Player2Movement : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 5f;
+     public float moveSpeed = 5f;
     [SerializeField] private string playerID = "Player2"; // Default to Player 2
     [SerializeField] private BoxCollider2D boundsCollider; // Restricts movement
+    public bool isBoosted;
 
     private Vector2 movementInput;
     private Rigidbody2D rb;

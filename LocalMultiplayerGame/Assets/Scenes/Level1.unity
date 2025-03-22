@@ -1789,6 +1789,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebced9d6a762e6f479246835024977a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lineRenderer: {fileID: 0}
+  trailPositions: []
 --- !u!58 &692624601
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2245,7 +2247,7 @@ GameObject:
   - component: {fileID: 912984452}
   - component: {fileID: 912984451}
   m_Layer: 0
-  m_Name: EraseSpawner
+  m_Name: SpeedSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2263,10 +2265,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fe68bea226bb5747bebde2a337f6560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EraserBombPrefab: {fileID: 8236732027088745697, guid: 6269a7a68e1277d45a9ef7cf298c6f0e, type: 3}
+  EraserBombPrefab: {fileID: 8459538122243758323, guid: fd1ead12af738974b809440e0708d304, type: 3}
   tilemaps: {fileID: 1012925033}
   playAreaColliders: {fileID: 409169529}
-  SpawnInterval: 20
+  SpawnInterval: 15
 --- !u!4 &912984452
 Transform:
   m_ObjectHideFlags: 0
@@ -5402,6 +5404,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebced9d6a762e6f479246835024977a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lineRenderer: {fileID: 0}
+  trailPositions: []
 --- !u!58 &1258990721
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -14464,7 +14468,7 @@ MonoBehaviour:
   ColourBombPrefab: {fileID: 8236732027088745697, guid: 10cb2dda37772b440bf9b406873a65a4, type: 3}
   tilemap: {fileID: 1012925033}
   playAreaCollider: {fileID: 409169529}
-  spawnInterval: 30
+  spawnInterval: 15
 --- !u!4 &1774311595
 Transform:
   m_ObjectHideFlags: 0
