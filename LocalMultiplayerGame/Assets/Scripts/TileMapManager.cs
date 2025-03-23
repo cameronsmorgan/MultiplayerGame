@@ -21,7 +21,7 @@ public class TileMapManager : MonoBehaviour
     private int player1Tiles;
     private int player2Tiles;
 
-    private HashSet<Vector3Int> playableTiles = new HashSet<Vector3Int>();
+    private HashSet<Vector3Int> playableTiles = new HashSet<Vector3Int>();  //hashset is an unordered collection
 
     private void Start()
     {
@@ -42,7 +42,7 @@ public class TileMapManager : MonoBehaviour
 
     private void CountTotalTiles()
     {
-        playableTiles.Clear();
+        playableTiles.Clear();   //empties the collection
         BoundsInt bounds = tilemap.cellBounds;
 
         for (int x = bounds.xMin; x < bounds.xMax; x++)
@@ -51,9 +51,9 @@ public class TileMapManager : MonoBehaviour
             {
                 Vector3Int tilePosition = new Vector3Int(x, y, 0);
 
-                if (tilemap.HasTile(tilePosition) && playAreaCollider.OverlapPoint(tilemap.GetCellCenterWorld(tilePosition)))
+                if (tilemap.HasTile(tilePosition) && playAreaCollider.OverlapPoint(tilemap.GetCellCenterWorld(tilePosition))) //checks if a tile exists and is within the playable area
                 {
-                    playableTiles.Add(tilePosition);
+                    playableTiles.Add(tilePosition);  //added to hashset
                 }
             }
         }
@@ -61,6 +61,15 @@ public class TileMapManager : MonoBehaviour
         totalTiles = playableTiles.Count;
         Debug.Log("Total Playable Tiles: " + totalTiles);
     }
+
+
+
+    /* Title: "How can I show how much of the play area each player has covered with tilemaps in unity with percentages"  &&  "How do I create a script that updates a player's progress based on Tilemap coverage in real-time?"
+     * Author: ChatGPT
+     * Date: 08 March 2025
+     * Code Version: Unity 6
+     * Availability: https://chatgpt.com/
+     */
 
     public void UpdateTileCoverage()
     {
@@ -70,19 +79,19 @@ public class TileMapManager : MonoBehaviour
         Vector2 min = playAreaCollider.bounds.min;
         Vector2 max = playAreaCollider.bounds.max;
 
-        Vector3Int minBounds = tilemap.WorldToCell(min);
-        Vector3Int maxBounds = tilemap.WorldToCell(max);
+        Vector3Int minBounds = tilemap.WorldToCell(min);       //PlayArea bounds are in world coordintates & world to cell converts into tilemap positions
+        Vector3Int maxBounds = tilemap.WorldToCell(max);       //allows the loop to iterate only within the tilemaps bounds that overlap the collider
 
         for (int x = minBounds.x; x <= maxBounds.x; x++)
         {
             for (int y = minBounds.y; y <= maxBounds.y; y++)
             {
                 Vector3Int tilePosition = new Vector3Int(x, y, 0);
-                Tile tile = tilemap.GetTile<Tile>(tilePosition);
+                Tile tile = tilemap.GetTile<Tile>(tilePosition);         //retrieves tile in a given position
 
                 if (tile != null)
                 {
-                    if (tile == player1Tile) player1Tiles++;
+                    if (tile == player1Tile) player1Tiles++;             //checks tile owenership
                     else if (tile == player2Tile) player2Tiles++;
                 }
             }
@@ -101,7 +110,7 @@ public class TileMapManager : MonoBehaviour
         }
 
         player1PercentageText.text = "PLAYER 1 \n" + player1Percentage.ToString("F1") + "%";
-        player2PercentageText.text = "PLAYER 2 \n" + player2Percentage.ToString("F1") + "%";
+        player2PercentageText.text = "PLAYER 2 \n" + player2Percentage.ToString("F1") + "%";  //f1 formats to 1 decimal point
 
         // Update Progress Bars
         if (player1ProgressBar != null) player1ProgressBar.value = player1Percentage;

@@ -28,6 +28,12 @@ public class ColourSpawner : MonoBehaviour
     }
 
 
+    /* Title: Random Position Within a 2d Collider
+     * Author: PapayaLimon
+     * Date: 13 March 2025
+     * Code version: Unity 2022.2
+     * Availability: https://discussions.unity.com/t/random-position-inside-2d-collider/907682
+     */
     private Vector2 GetRandomPositionWithinPlayArea()
     {
         Bounds bounds = playAreaCollider.bounds;

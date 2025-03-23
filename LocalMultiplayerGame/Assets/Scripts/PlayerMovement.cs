@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
 
         rb.MovePosition(targetPosition);
 
-        // Try to paint only in the allowed area
+        // paint only in the allowed area
         PaintableAreaManager.Instance.PaintTile(targetPosition, playerID);
     }
 }

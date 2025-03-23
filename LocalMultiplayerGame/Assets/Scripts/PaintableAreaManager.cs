@@ -22,25 +22,32 @@ public class PaintableAreaManager : MonoBehaviour
     {
         Vector3Int cellPosition = paintableTilemap.WorldToCell(worldPosition);
 
-        // Check if the position is inside the paintable tilemap
+        
         if (!paintableTilemap.HasTile(cellPosition))
             return false;
 
-        // Check if the same position has an outline tile (prevent overlapping)
-        if (outlineTilemap != null && outlineTilemap.HasTile(cellPosition))
+        
+        if (outlineTilemap != null && outlineTilemap.HasTile(cellPosition)) // Checks if the same position has an outline tile (prevent overlapping)
             return false;
 
         return true;
     }
 
+    /* Title:Tilemap.SetTile
+     * Author: Unity Documentation 
+     * Date: 07 March
+     * Code Version: Unity 6
+     * Availability:  https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Tilemaps.Tilemap.SetTile.html
+     */
     public void PaintTile(Vector2 worldPosition, string playerID)
     {
         Vector3Int cellPosition = paintableTilemap.WorldToCell(worldPosition);
 
-        // Only paint if it's a valid paintable tile and NOT the outline
-        if (!CanPaint(worldPosition)) return;
+        
+        if (!CanPaint(worldPosition))
+            return;                              // Only paint if it's a valid paintable tile and NOT the outline
 
-        Tile tileToPaint = playerID == "Player1" ? player1Tile : player2Tile;
+        Tile tileToPaint = playerID == "Player1" ? player1Tile : player2Tile;  //determines which tile to paint
         paintableTilemap.SetTile(cellPosition, tileToPaint);
     }
 }

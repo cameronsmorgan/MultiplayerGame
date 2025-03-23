@@ -6,7 +6,7 @@ public class ColourBomb : MonoBehaviour
     public Tilemap tilemap; // Player's paint tilemap (not the base tilemap)
     public Tile player1Tile;
     public Tile player2Tile;
-    public float shakeDuration = 0.5f; // Duration of the camera shake
+    public float shakeDuration = 0.5f; 
     public float shakeMagnitude = 0.1f; // Magnitude of the camera shake
 
     private CameraShake cameraShake;
@@ -16,7 +16,7 @@ public class ColourBomb : MonoBehaviour
         // Auto-assign tilemap if not set in Inspector
         if (tilemap == null)
         {
-            GameObject tilemapObject = GameObject.Find("PaintableTiles"); // Ensure this is the correct name
+            GameObject tilemapObject = GameObject.Find("PaintableTiles"); // Ensure this is the correct name!!
             if (tilemapObject != null)
             {
                 tilemap = tilemapObject.GetComponent<Tilemap>();
@@ -50,7 +50,7 @@ public class ColourBomb : MonoBehaviour
             // Trigger camera shake
             cameraShake?.TriggerShake(shakeDuration, shakeMagnitude);
 
-            // Destroy bomb object after explosion
+            
             Destroy(gameObject);
         }
     }
@@ -63,8 +63,15 @@ public class ColourBomb : MonoBehaviour
             return;
         }
 
-        // Loop through a 6x6 area around the bomb (total 7x7 including center)
-        for (int x = -3; x <= 3; x++)
+        /* Title: Making a grid-based game
+         * Author: cupcakehox
+         * Date: 13 March 2025
+         * Code Version: Unity 6000.0
+         * Availability: https://discussions.unity.com/t/making-a-grid-based-game/703900/2
+         */
+
+        for (int x = -3; x <= 3; x++)           // Loop through a 6x6 area around the bomb (total 7x7 including center)
+
         {
             for (int y = -3; y <= 3; y++)
             {

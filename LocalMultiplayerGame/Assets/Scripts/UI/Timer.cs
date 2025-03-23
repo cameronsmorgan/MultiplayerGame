@@ -4,15 +4,15 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    public TextMeshProUGUI timerText; // Reference to the UI Text for the timer
-    public float startTime = 60f; // Start time in seconds (1 minute)
+    public TextMeshProUGUI timerText;
+    public float startTime = 60f;
     private float currentTime;
 
-    public TileMapManager tileMapManager; // Reference to the TileMapManager script
-    public GameObject gameOverPanel; // Reference to the Game Over panel
-    public TextMeshProUGUI winnerText; // Reference to the Winner Text
+    public TileMapManager tileMapManager;
+    public GameObject gameOverPanel;
+    public TextMeshProUGUI winnerText; 
 
-    private bool isGameOver = false;
+    [SerializeField] private bool isGameOver = false;
 
     private void Start()
     {
@@ -63,7 +63,7 @@ public class Timer : MonoBehaviour
             winnerText.text = "DRAW";
         }
 
-        // Activate the Game Over panel
+       
         if (gameOverPanel != null)
         {
             gameOverPanel.SetActive(true);
