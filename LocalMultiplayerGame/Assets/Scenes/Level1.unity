@@ -813,7 +813,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: PLAYER 2
+  m_Text: HUE
 --- !u!222 &349212327
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2638,7 +2638,6 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Arrow Keys: Controls Hue (Blue)
 
-    
 
     WASD: Controls Goo (Green)'
   m_isRightToLeft: 0
@@ -6032,7 +6031,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: PLAYER 1
+  m_Text: GOO
 --- !u!222 &1196310068
 CanvasRenderer:
   m_ObjectHideFlags: 0

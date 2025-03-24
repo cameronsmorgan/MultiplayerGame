@@ -315,7 +315,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: PLAYER 2
+  m_Text: HUE
 --- !u!222 &97944969
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1468,7 +1468,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: PLAYER 1
+  m_Text: GOO
 --- !u!222 &542827686
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6255,9 +6255,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paintableTilemap: {fileID: 1414243220}
-  outlineTilemap: {fileID: 941660427}
-  player1Tile: {fileID: 11400000, guid: e8d3c344c7db0ef4aaf6de9388968364, type: 2}
-  player2Tile: {fileID: 11400000, guid: 24ba8eb4d082d744389c3020c505b6d4, type: 2}
+  outlineTilemap: {fileID: 0}
+  player1Tile: {fileID: 11400000, guid: d474a8ed76c2f1241ae4b50148f28857, type: 2}
+  player2Tile: {fileID: 11400000, guid: afa6abb6b9e058042a91d9f4f0f3d0c2, type: 2}
 --- !u!4 &998474404
 Transform:
   m_ObjectHideFlags: 0
@@ -6908,7 +6908,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: 'Arrow Keys: Controls Hue (Blue)
-
 
 
     WASD: Controls Goo (Green)'

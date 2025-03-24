@@ -343,7 +343,6 @@ MonoBehaviour:
   m_text: 'Arrow Keys: Controls Hue (Blue)
 
 
-
     WASD: Controls Goo (Green)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 57250b51c6246e44580b68e1b75d696b, type: 2}
@@ -32459,7 +32458,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: PLAYER 1
+  m_Text: GOO
 --- !u!222 &1461111856
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -34030,7 +34029,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: PLAYER 2
+  m_Text: HUE
 --- !u!222 &1946434673
 CanvasRenderer:
   m_ObjectHideFlags: 0
