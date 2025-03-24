@@ -973,8 +973,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilemap: {fileID: 1414243220}
-  player1Tile: {fileID: 11400000, guid: e8d3c344c7db0ef4aaf6de9388968364, type: 2}
-  player2Tile: {fileID: 11400000, guid: 24ba8eb4d082d744389c3020c505b6d4, type: 2}
+  player1Tile: {fileID: 11400000, guid: d474a8ed76c2f1241ae4b50148f28857, type: 2}
+  player2Tile: {fileID: 11400000, guid: afa6abb6b9e058042a91d9f4f0f3d0c2, type: 2}
   player1PercentageText: {fileID: 470963448}
   player2PercentageText: {fileID: 683532853}
   player1ProgressBar: {fileID: 787486244}
