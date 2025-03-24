@@ -184,10 +184,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      colourbomb_0: -2980199529325079171
-      colourbomb_1: -7576709394688430175
-      colourbomb_2: -5788935054078786702
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
