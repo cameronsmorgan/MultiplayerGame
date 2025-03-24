@@ -1586,6 +1586,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilemap: {fileID: 1414243220}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   player1Tile: {fileID: 11400000, guid: d474a8ed76c2f1241ae4b50148f28857, type: 2}
   player2Tile: {fileID: 11400000, guid: afa6abb6b9e058042a91d9f4f0f3d0c2, type: 2}
   player1PercentageText: {fileID: 1196310067}
@@ -1593,12 +1594,17 @@ MonoBehaviour:
   player1ProgressBar: {fileID: 627305378}
   player2ProgressBar: {fileID: 923721096}
 =======
+=======
+>>>>>>> Stashed changes
   player1Tile: {fileID: 11400000, guid: e8d3c344c7db0ef4aaf6de9388968364, type: 2}
   player2Tile: {fileID: 11400000, guid: 24ba8eb4d082d744389c3020c505b6d4, type: 2}
   player1PercentageText: {fileID: 4209763}
   player2PercentageText: {fileID: 132135854}
   player1ProgressBar: {fileID: 2031871537}
   player2ProgressBar: {fileID: 1837880375}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   playAreaCollider: {fileID: 409169529}
 --- !u!1 &581763819
@@ -6195,8 +6201,14 @@ MonoBehaviour:
   startTime: 60
   tileMapManager: {fileID: 557783969}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   gameOverPanel: {fileID: 2132473870}
   winnerText: {fileID: 887927147}
+=======
+  gameOverPanel: {fileID: 0}
+  winnerText: {fileID: 0}
+  winnerText2: {fileID: 0}
+>>>>>>> Stashed changes
 =======
   gameOverPanel: {fileID: 0}
   winnerText: {fileID: 0}
@@ -6409,6 +6421,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!95 &1258990722
 Animator:
   serializedVersion: 7
@@ -6432,6 +6445,9 @@ Animator:
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1311285922
+=======
+--- !u!1 &1309220284
+>>>>>>> Stashed changes
 =======
 --- !u!1 &1309220284
 >>>>>>> Stashed changes
