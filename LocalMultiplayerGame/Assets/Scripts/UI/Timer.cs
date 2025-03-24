@@ -10,8 +10,7 @@ public class Timer : MonoBehaviour
 
     public TileMapManager tileMapManager;
     public GameObject gameOverPanel;
-    public TextMeshProUGUI winnerText;
-    public TextMeshProUGUI winnerText2;
+    public TextMeshProUGUI winnerText; 
 
     [SerializeField] private bool isGameOver = false;
 
@@ -54,17 +53,14 @@ public class Timer : MonoBehaviour
         if (player1Percentage > player2Percentage)
         {
             winnerText.text = "GOO WINS";
-            winnerText2.text = "GOO WINS";
         }
         else if (player2Percentage > player1Percentage)
         {
             winnerText.text = "HUE WINS";
-            winnerText2.text = "HUE WINS";
         }
         else
         {
             winnerText.text = "DRAW";
-            winnerText2.text = "DRAW";
         }
 
        
