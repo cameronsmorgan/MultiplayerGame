@@ -7,11 +7,11 @@ public class Player2Movement : MonoBehaviour
     [SerializeField] private string playerID = "Player2"; // Default to Player 2
     [SerializeField] private BoxCollider2D boundsCollider; // Restricts movement
     public bool isBoosted;
-    public Animator Snail2Cont;
 
     private Vector2 movementInput;
     private Rigidbody2D rb;
 
+    public Animator Snail2Cont;
 
     private void Start()
     {
@@ -22,12 +22,12 @@ public class Player2Movement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         Snail2Cont.SetBool("isMoving", false);
+
     }
 
     public void OnMove(InputAction.CallbackContext context)
     {
         movementInput = context.ReadValue<Vector2>();
-
     }
 
     private void FixedUpdate()
@@ -45,7 +45,7 @@ public class Player2Movement : MonoBehaviour
         if (movementInput != Vector2.zero)
         {
             float angle = Mathf.Atan2(movementInput.y, movementInput.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0, 0, angle - 90); 
+            transform.rotation = Quaternion.Euler(0, 0, angle - 90);
         }
 
         if (movementInput != Vector2.zero)
@@ -56,6 +56,7 @@ public class Player2Movement : MonoBehaviour
         {
             Snail2Cont.SetBool("isMoving", false);
         }
+
 
         // Try to paint only in the allowed area
         PaintableAreaManager.Instance.PaintTile(targetPosition, playerID);
