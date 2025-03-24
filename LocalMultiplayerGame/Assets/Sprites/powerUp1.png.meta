@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 4d71dac0fab2d4042990654ced5bc4f7
+guid: a6fa21eeb48b8d24abaee30a7f18c260
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1899117237765575108
-    second: Untitled_6_copy_0
+      213: -6244812984065722979
+    second: powerUp1_0
+  - first:
+      213: -6743036969043269766
+    second: powerUp1_1
+  - first:
+      213: 6202178328384674576
+    second: powerUp1_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 320
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,12 +106,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Untitled_6_copy_0
+      name: powerUp1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 318
+        width: 320
         height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -113,10 +119,32 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4c196d7d0150b5a10800000000000000
-      internalID: 1899117237765575108
+      spriteID: 13e755a12877598468fa41ee3239b826
+      internalID: -1794302638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: powerUp1_1
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d21ff0b49d3936b41aa94639ec0d6eee
+      internalID: 212599539
       vertices: []
       indices: 
       edges: []
@@ -125,7 +153,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9b19df0abb6a25846aa9ab72e215b3cb
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +163,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Untitled_6_copy_0: 1899117237765575108
+      powerUp1_0: -1794302638
+      powerUp1_1: 212599539
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

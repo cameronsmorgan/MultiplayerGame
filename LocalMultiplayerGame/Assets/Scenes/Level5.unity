@@ -1221,6 +1221,54 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &490675619
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 490675621}
+  - component: {fileID: 490675620}
+  m_Layer: 0
+  m_Name: SpeedSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &490675620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490675619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fe68bea226bb5747bebde2a337f6560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EraserBombPrefab: {fileID: 8459538122243758323, guid: fd1ead12af738974b809440e0708d304, type: 3}
+  tilemaps: {fileID: 0}
+  playAreaColliders: {fileID: 0}
+  SpawnInterval: 15
+--- !u!4 &490675621
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490675619}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.4768635, y: 1.3398504, z: -0.088180766}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &504937730
 GameObject:
   m_ObjectHideFlags: 0
@@ -2366,7 +2414,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: PLAYER 2
+  m_Text: 'HUE
+
+'
 --- !u!222 &712951050
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2692,54 +2742,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 893525338}
   m_CullTransparentMesh: 1
---- !u!1 &912984450
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 912984452}
-  - component: {fileID: 912984451}
-  m_Layer: 0
-  m_Name: EraseSpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &912984451
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 912984450}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fe68bea226bb5747bebde2a337f6560, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EraserBombPrefab: {fileID: 8236732027088745697, guid: 6269a7a68e1277d45a9ef7cf298c6f0e, type: 3}
-  tilemaps: {fileID: 1414243220}
-  playAreaColliders: {fileID: 409169529}
-  SpawnInterval: 20
---- !u!4 &912984452
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 912984450}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.4768635, y: 1.3398504, z: -0.088180766}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &927792952
 GameObject:
   m_ObjectHideFlags: 0
@@ -6895,7 +6897,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: PLAYER 1
+  m_Text: 'GOO
+
+'
 --- !u!222 &1066293560
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16390,7 +16394,7 @@ SceneRoots:
   - {fileID: 474920654}
   - {fileID: 705305547}
   - {fileID: 998474404}
-  - {fileID: 912984452}
   - {fileID: 1774311595}
   - {fileID: 457990690}
   - {fileID: 1217875337}
+  - {fileID: 490675621}

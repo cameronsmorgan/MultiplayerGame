@@ -32467,6 +32467,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1461111853}
   m_CullTransparentMesh: 1
+--- !u!1 &1574597413
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1574597415}
+  - component: {fileID: 1574597414}
+  m_Layer: 0
+  m_Name: SpeedSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1574597414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1574597413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fe68bea226bb5747bebde2a337f6560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EraserBombPrefab: {fileID: 8459538122243758323, guid: fd1ead12af738974b809440e0708d304, type: 3}
+  tilemaps: {fileID: 1012925033}
+  playAreaColliders: {fileID: 409169529}
+  SpawnInterval: 15
+--- !u!4 &1574597415
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1574597413}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.4768635, y: 1.3398504, z: -0.088180766}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1613402523
 GameObject:
   m_ObjectHideFlags: 0
@@ -33761,54 +33809,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1885855850}
   m_CullTransparentMesh: 1
---- !u!1 &1887099603
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1887099605}
-  - component: {fileID: 1887099604}
-  m_Layer: 0
-  m_Name: EraseSpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1887099604
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1887099603}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fe68bea226bb5747bebde2a337f6560, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EraserBombPrefab: {fileID: 8236732027088745697, guid: 6269a7a68e1277d45a9ef7cf298c6f0e, type: 3}
-  tilemaps: {fileID: 1414243220}
-  playAreaColliders: {fileID: 409169529}
-  SpawnInterval: 20
---- !u!4 &1887099605
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1887099603}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.4768635, y: 1.3398504, z: -0.088180766}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1901341704 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5016261150623931931, guid: 39bf4375a3a969848af3f4cb2ee40466, type: 3}
@@ -34526,7 +34526,7 @@ SceneRoots:
   - {fileID: 998474404}
   - {fileID: 1398180923}
   - {fileID: 929753900}
-  - {fileID: 1887099605}
   - {fileID: 1129367534}
   - {fileID: 738945084}
   - {fileID: 879906016}
+  - {fileID: 1574597415}
